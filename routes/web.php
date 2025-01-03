@@ -5,7 +5,7 @@ use App\Http\Controllers\KontakController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-  return view('welcome');
+  return 'Selamat datang di website saya booos akuuu';
 });
 
 
