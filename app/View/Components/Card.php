@@ -12,11 +12,12 @@ class Card extends Component
      * Create a new component instance.
      */
 
-    public $gambar, $judul;
-    public function __construct($gambar, $judul)
+    public $gambar, $judul, $url;
+    public function __construct($gambar, $judul, $url)
     {
         $this->gambar = $gambar;
         $this->judul = $judul;
+        $this->url = $url;
     }
     /**
      * Get the view / contents that represent the component.

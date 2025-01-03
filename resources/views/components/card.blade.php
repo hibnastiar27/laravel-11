@@ -1,10 +1,9 @@
-<div
-    class="card border rounded-xl p-4 flex items-center gap-4 duration-300 hover:duration-300 hover:cursor-pointer hover:shadow-lg">
-    <div class="card-header">
-        <img src="{{ $gambar }}" class="w-32 rounded-xl" alt="html">
-    </div>
-    <div class="card-body">
-        <h1 class="font-bold text-4xl">{{ $judul }}</h1>
-        <p>{{ $slot }}</p>
-    </div>
-</div>
+<a href="{{ $url }}" class="card flex gap-4 p-4 items-center bg-white shadow-lg rounded-xl border-2 border-slate-100">
+  <div class="card-header">
+    <img src="{{ $gambar }}" class="w-60 rounded-xl" alt="html">
+  </div>
+  <div class="card-body flex flex-col gap-3">
+    <h1 class="font-bold text-4xl">{{ $judul }}</h1>
+    <p>{{ $slot }}</p>
+  </div>
+</a>
