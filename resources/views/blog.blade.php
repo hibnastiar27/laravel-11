@@ -1,4 +1,4 @@
-@extends('layouts.dasboard')
+@extends('layouts.guest')
 
 @section('content')
   {{-- CONTENT --}}

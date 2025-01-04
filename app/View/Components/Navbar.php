@@ -12,10 +12,9 @@ class Navbar extends Component
      * Create a new component instance.
      */
 
-    public $slug;
-    public function __construct($slug)
+    public function __construct()
     {
-        $this->slug = $slug;
+
     }
 
     /**
