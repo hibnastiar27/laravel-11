@@ -11,7 +11,6 @@ class BlogController extends Controller
   public function index()
   {
     $title = 'Blog';
-    $slug = 'blog';
     $posts = [
       [
         'id' => 1,
@@ -30,7 +29,7 @@ class BlogController extends Controller
         'gambar' => 'img/css-sqr.png',
       ],
     ];
-    return view('blog', compact('slug', 'title', 'posts'));
+    return view('blog', compact( 'title', 'posts'));
   }
 
 

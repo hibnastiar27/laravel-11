@@ -15,7 +15,7 @@
 
   <body>
     {{-- NAVBAR --}}
-    <x-navbar :slug="$slug" />
+    <x-navbar />
 
     {{-- CONTENT --}}
     <main class="min-h-screen">
