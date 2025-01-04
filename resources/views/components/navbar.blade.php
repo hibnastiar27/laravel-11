@@ -6,6 +6,7 @@
   </h1>
   <div class="flex gap-4 *:p-2">
     <a href="{{ route('blog') }}" class="{{ request()->routeIs('blog') ? 'text-red-500 font-bold' : '' }}">Blog</a>
+    <a href="{{ route('kelas') }}" class="{{ request()->routeIs('kelas') ? 'text-red-500 font-bold' : '' }}">Kelas</a>
     <a href="{{ route('kontak') }}" class="{{ request()->routeIs('kontak') ? 'text-red-500 font-bold' : '' }}">Contact</a>
   </div>
 </nav>
