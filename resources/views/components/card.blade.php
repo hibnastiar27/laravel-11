@@ -1,9 +1,8 @@
-<a href="{{ $url }}" class="card flex flex-col md:flex-row gap-4 p-4 items-center bg-white shadow-lg rounded-xl border-2 border-slate-100">
-  <div class="card-header w-full xl:w-60">
-    <img src="{{ $gambar }}" class="w-full h-40 object-cover rounded-xl" alt="html">
-  </div>
+<a href="{{ $url }}"
+  class="card flex flex-col items-center gap-4 rounded-xl border-2 border-slate-100 border-transparent bg-white p-4 shadow-lg duration-300 hover:border-blue-500 md:flex-row">
+  <img src="{{ $gambar }}" class="h-40 w-full rounded-xl object-cover md:h-40 md:w-40" alt="html">
   <div class="card-body flex flex-col gap-3">
-    <h1 class="font-bold text-4xl">{{ $judul }}</h1>
+    <h1 class="text-4xl font-bold">{{ $judul }}</h1>
     <p>{{ $slot }}</p>
   </div>
 </a>
