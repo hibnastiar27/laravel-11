@@ -3,7 +3,7 @@
 @section('content')
   {{-- CONTENT --}}
   <div class="flex flex-col gap-4 p-4 sm:px-6 md:mx-auto md:max-w-screen-xl md:p-4">
-    <div class="welcome mt-6">
+    <div class="welcome">
       <div class="flex flex-col items-center gap-2 rounded-xl bg-slate-100 px-20 py-10">
         <p class="tracking-[0.5rem]">WELCOME TO ARIA[B]LOG</p>
         <h1 class="font-serif text-[42px] font-bold">Catatan <span class="italic text-blue-500 underline">Suka-Suka</span>,
