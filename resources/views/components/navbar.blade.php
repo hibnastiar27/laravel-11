@@ -15,8 +15,6 @@
           <a href="{{ route('kontak') }}"
             class="{{ request()->routeIs('kontak') ? 'text-blue-500 font-bold' : '' }}">Contact</a>
         </div>
-
-
         <div class="flex gap-4">
           @auth
             <a href="{{ url('/dashboard') }}"
@@ -28,7 +26,6 @@
               class="{{ request()->routeIs('dashboard') ? 'text-blue-500 font-bold' : '' }}">
               Log in
             </a>
-
             @if (Route::has('register'))
               <a href="{{ route('register') }}"
                 class="{{ request()->routeIs('dashboard') ? 'text-blue-500 font-bold' : '' }}">
