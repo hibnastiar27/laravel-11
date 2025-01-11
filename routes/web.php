@@ -1,18 +1,32 @@
 <?php
 
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Artikel;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('dashboard', function () {
-    return view('dashboard.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('dashboard', function () {
+//     return view('dashboard.dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', function() {
+        return view('dashboard.dashboard');
+    })->name('dashboard');
+
+
+    Route::get('/kategori', [KategoriController::class,'index'])->name('kategori');
+    Route::get('/artikel', [ArtikelController::class,'index'])->name('artikel');
+});
 
 Route::middleware('auth')->group(function () {
   Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

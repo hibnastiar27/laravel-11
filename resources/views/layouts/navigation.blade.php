@@ -25,7 +25,7 @@
       </a>
 
       <div class="my-2 space-y-2 font-medium">
-        <a href="{{ route('dashboard') }}"
+        <a href="{{ route('admin.dashboard') }}"
           class="group flex items-center rounded-lg border border-green-300 bg-green-100 p-2 font-bold text-green-500 duration-300 hover:border-green-600 hover:bg-green-200 hover:text-green-600 dark:text-white dark:hover:bg-gray-700">
           <svg
             class="h-5 w-5 text-green-500 transition duration-300 group-hover:text-green-600 dark:text-gray-400 dark:group-hover:text-white"
@@ -36,7 +36,7 @@
           </svg>
           <span class="ms-3">Dashboard</span>
         </a>
-        <a href="#"
+        <a href="{{ route('admin.kategori') }}"
           class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-green-100 dark:text-white dark:hover:bg-gray-700">
           <svg
             class="h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
@@ -48,7 +48,7 @@
           <span
             class="ms-3 inline-flex items-center justify-center rounded-full bg-gray-100 px-2 text-sm font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-300">Pro</span>
         </a>
-        <a href="#"
+        <a href="{{ route('admin.artikel') }}"
           class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-green-100 dark:text-white dark:hover:bg-gray-700">
           <svg
             class="h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
