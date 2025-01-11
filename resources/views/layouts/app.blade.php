@@ -24,14 +24,14 @@
       @isset($header)
         <header class="bg-white shadow">
           <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            {{ $header }}
+            @yield('header')
           </div>
         </header>
       @endisset
 
       <!-- Page Content -->
-      <main>
-        {{ $slot }}
+      <main class="sm:ml-64">
+        @yield('content')
       </main>
     </div>
   </body>
