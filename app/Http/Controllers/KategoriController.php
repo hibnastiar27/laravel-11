@@ -9,15 +9,19 @@ class KategoriController extends Controller
 {
 
     public function index() {
-        $kategori = Kategori::all('id','name')->map(function($item) {
+
+        $kategori = Kategori::select('id','name')->paginate(10)->through(function($item) {
             return [
                 'id' => $item->id,
                 'name'=> $item->name
             ];
-        })->toArray();
+        });
+
+
+        $katArray = $kategori->toArray();
 
         $columns = ['Kategori'];
-        return view('dashboard.kategori', compact('kategori','columns'));
+        return view('dashboard.kategori', compact('kategori', 'katArray','columns'));
     }
 
 
@@ -45,7 +49,7 @@ class KategoriController extends Controller
     public function destroy($id) {
         $kategori = Kategori::findOrFail($id);
         $kategori->delete();
-        return redirect()->route('admin.kategori.destroy')->with('success','Kategori Berhasil Dihapus');
+        return redirect()->route('admin.kategori')->with('success','Kategori Berhasil Dihapus');
     }
 
 }

@@ -14,11 +14,14 @@ class AdminTable extends Component
     public array $columns;
     public array $rows;
     public  $route;
-    public function __construct($columns = [], $rows = [], $route)
+
+    public $kategori;
+    public function __construct($columns = [], $rows = [], $route, $kategori)
     {
         $this->columns = $columns;
         $this->rows = $rows;
         $this->route = $route;
+        $this->kategori = $kategori;
     }
 
     /**

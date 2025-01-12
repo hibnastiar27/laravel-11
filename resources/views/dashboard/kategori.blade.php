@@ -11,7 +11,7 @@
     </div> --}}
     <x-AdminHeader>Kategori</x-AdminHeader>
 
-    <x-AdminTable :columns="$columns" :rows="$kategori" route="kategori" />
+    <x-AdminTable :columns="$columns" :rows="$katArray" :kategori="$kategori" route="kategori" />
 
   </section>
 @endsection
