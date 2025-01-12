@@ -13,16 +13,11 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-// Route::get('dashboard', function () {
-//     return view('dashboard.dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
 
 Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', function() {
         return view('dashboard.dashboard');
     })->name('dashboard');
-
 
     Route::get('/kategori', [KategoriController::class,'index'])->name('kategori');
     Route::get('/artikel', [ArtikelController::class,'index'])->name('artikel');
