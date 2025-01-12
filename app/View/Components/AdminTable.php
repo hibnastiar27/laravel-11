@@ -13,10 +13,12 @@ class AdminTable extends Component
      */
     public array $columns;
     public array $rows;
-    public function __construct($columns = [], $rows = [])
+    public  $route;
+    public function __construct($columns = [], $rows = [], $route)
     {
         $this->columns = $columns;
         $this->rows = $rows;
+        $this->route = $route;
     }
 
     /**

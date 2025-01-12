@@ -19,7 +19,14 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
         return view('dashboard.dashboard');
     })->name('dashboard');
 
-    Route::get('/kategori', [KategoriController::class,'index'])->name('kategori');
+    Route::prefix('kategori')->group(function () {
+        Route::get('/', [KategoriController::class,'index'])->name('kategori');
+        Route::get('/create', [KategoriController::class,'create'])->name('kategori.create');
+        Route::post('/', [KategoriController::class,'store'])->name('kategori.store');
+        Route::get('/edit/{id}', [KategoriController::class,'edit'])->name('kategori.edit');
+        Route::put('/{id}', [KategoriController::class,'update'])->name('kategori.update');
+        Route::delete('/{id}', [KategoriController::class,'destroy'])->name('kategori.destroy');
+    });
     Route::get('/artikel', [ArtikelController::class,'index'])->name('artikel');
 });
 
