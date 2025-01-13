@@ -21,7 +21,7 @@ class KategoriController extends Controller
         $katArray = $kategori->toArray();
 
         $columns = ['Kategori'];
-        return view('dashboard.kategori', compact('kategori', 'katArray','columns'));
+        return view('kategori.kategori', compact('kategori', 'katArray','columns'));
     }
 
 

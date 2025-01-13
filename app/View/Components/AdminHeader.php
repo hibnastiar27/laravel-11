@@ -11,8 +11,11 @@ class AdminHeader extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+
+    public $url;
+    public function __construct($url)
     {
+        $this->url = $url;
     }
 
     /**
